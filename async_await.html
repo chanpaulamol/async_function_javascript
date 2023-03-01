@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promise Javascript</title>
+    <title>Async and Await</title>
 </head>
 
 <body>
-
     <div id="root"></div>
     <script>
         // Function that returns a promise that resolves with a sum
@@ -23,13 +22,16 @@
             });
         }
 
-        addNumbers(5, 7)
-            .then((sum) => {
-                document.getElementById('root').innerHTML = 'Result is ' + sum;
-            })
-            .catch((error) => {
+        // Asycnc function
+        async function perform() {
+            try {
+                let sum = await addNumbers(5, 7);
+                document.getElementById('root').innerHTML = "After Async/Await the result is " + sum;
+            } catch (error) {
                 console.error(error);
-            });
+            }
+        }
+        perform();
 
     </script>
 </body>
