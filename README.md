@@ -14,3 +14,12 @@ Imagine you're ordering food from a restaurant. You place your order, but it's g
 In this scenario, the order you placed is like a JavaScript promise. It represents an action that is going to be completed at some point in the future. The restaurant is like the code that will fulfill or reject the promise, depending on whether the order can be completed or not. And while you're waiting for your food, you can continue doing other things, just like you can continue running other code while waiting for a promise to be fulfilled.
 
 
+This is an example of a JavaScript function that returns a Promise.
+
+The addNumbers function takes in two parameters num1 and num2, checks if they are both numbers using typeof operator, and returns a Promise that resolves with the sum of the two numbers or rejects with an Error object if either of the parameters is not a number.
+
+The addNumbers function is then called with arguments 5 and 7 and the returned Promise is handled using .then() and .catch() methods.
+
+If the Promise is resolved, the .then() method is called with the sum value, which is then used to set the innerHTML of an element with id 'root' to display the result.
+
+If the Promise is rejected, the .catch() method is called with an error object, which is then logged to the console using console.error().
